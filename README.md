@@ -88,5 +88,5 @@ dependencies {
 模板目录：Android Studio安装目录\plugins\android\lib\templates\activities
 ```
 2. 自动生成代码  
-![MVPKtActivity 1](http://git.snailpet.top/xiaoqinghong/AndroidQuickMVP/src/master/images/create_page_1.png)  
-![MVPKtActivity 2](http://git.snailpet.top/xiaoqinghong/AndroidQuickMVP/src/master/images/create_page_2.png)
+![MVPKtActivity 1](images/create_page_1.png)  
+![MVPKtActivity 2](images/create_page_2.png)
