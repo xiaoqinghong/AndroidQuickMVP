@@ -76,7 +76,24 @@ dependencies {
     api 'com.zhihu.android:matisse:0.5.1'
 }
 ```
-只需要将该模块以model的方式引入到工厂即可  
+只需要将该模块以model的方式引入到工程即可  
+在导入之前需要在build.gradle中添加如下代码
+```
+buildscript {
+    ext{
+        is_component = true
+        compile_version = 28
+        min_version = 21
+        target_version = 28
+        support_version = '28.0.0'
+        gradle_version = '3.3.1'
+        app_id = "com.snail.stargazing"
+        code_version = 1
+        version_name = "1.0"
+        kotlin_version = '1.3.20'
+    }
+}
+```
 ![import module](images/import_module_base_1.png)  
 ### MVPKtActivity  
 ![app tree](images/app_tree.png)  
