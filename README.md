@@ -1,7 +1,7 @@
 ### AndroidQuicMVP  
 致力于快速实现Android MVP架构的快速开发，其中含有两大模块，分别是ModulesBase和MVPKtActivity下面将介绍两个模块的作用和如何使用。  
 ### ModulesBase  
-![ModuleBase Tree](http://git.snailpet.top/xiaoqinghong/AndroidQuickMVP/src/master/images/module_base_tree.png)  
+![ModuleBase Tree](images/module_base_tree.png)  
 
 在该模块中集成了RxJava、Glide等常用的基础三方库  
 ```
@@ -77,9 +77,9 @@ dependencies {
 }
 ```
 只需要将该模块以model的方式引入到工厂即可  
-![import module](http://git.snailpet.top/xiaoqinghong/AndroidQuickMVP/src/master/images/import_module_base_1.png)  
+![import module](images/import_module_base_1.png)  
 ### MVPKtActivity  
-![app tree](http://git.snailpet.top/xiaoqinghong/AndroidQuickMVP/src/master/images/app_tree.png)  
+![app tree](images/app_tree.png)  
 
 该模块是一个模板，能够快速生成MVP对应的代码。可以用于生成Activity、Fragment。  
 1. 导入模板
