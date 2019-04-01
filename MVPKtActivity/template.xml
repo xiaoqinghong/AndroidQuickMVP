@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="1"
+    name="MVP Activity Kotlin"
+    minApi="9"
+    minBuildApi="14"
+    description="快速创建基础MVP架构的activity(仅支持Kotlin)">
+
+    <category value="Activity" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="pageName"
+        name="Page Name"
+        type="string"
+        constraints="unique|nonempty"
+        default="Main"
+        help="请填写页面名,如填写 Main,会自动生成 MainActivity, MainPresenter 等文件" />
+
+    <parameter
+        id="isFragment"
+        name="是否创建为Fragment"
+        type="boolean"
+        default="false"
+        help="若勾选了，则创建fragment，若未勾选，则创建activity"/>
+
+    <parameter
+        id="packageName"
+        name="Root Package Name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp"
+        help="请填写你的项目包名,请认真核实此包名是否是正确的项目包名,不能包含子包,正确的格式如:me.eric.mvp"/>
+
+   <parameter
+        id="activityLayoutName"
+        name="Activity Layout Name"
+        type="string"
+        constraints="layout|nonempty"
+        suggest="activity_${classToResource(pageName)}"
+        default="activity_main"
+        help="Activity Layout" />
+
+
+     <parameter
+        id="fragmentLayoutName"
+        name="fragment Layout Name"
+        type="string"
+        constraints="layout|nonempty"
+        suggest="fragment_${classToResource(pageName)}"
+        default="fragment_main"
+        help="Fragment layout" />	
+    
+	<parameter
+        id="ativityPackageName"
+        name="Ativity Package Name"
+        type="string"
+        constraints="package"
+        suggest="${packageName}.mvp.ui.activity"
+        help="Activity 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
+        />
+
+    <parameter
+        id="fragmentPackageName"
+        name="Fragment Package Name"
+        type="string"
+        constraints="package"
+        suggest="${packageName}.mvp.ui.fragment"
+        visibility="isFragment"
+        help="fragment 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
+        />
+
+    <parameter
+        id="presenterPackageName"
+        name="Presenter Package Name"
+        type="string"
+        constraints="package"
+        suggest="${packageName}.mvp.presenter"
+        help="Presenter 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
+        />
+
+     <parameter
+        id="contractPackageName"
+        name="Contract Package Name"
+        type="string"
+        constraints="package"
+        suggest="${packageName}.mvp.contract"
+        help="Contract 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
+        />
+
+    <parameter
+        id="modelPackageName"
+        name="Model Package Name"
+        type="string"
+        constraints="package"
+        suggest="${packageName}.mvp.model"
+        help="Contract 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
+        />
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_blank_activity.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
