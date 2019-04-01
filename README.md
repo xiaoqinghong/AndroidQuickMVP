@@ -1,4 +1,4 @@
-### AndroidQuicMVP  
+### AndroidQuickMVP  
 致力于快速实现Android MVP架构的快速开发，其中含有两大模块，分别是ModulesBase和MVPKtActivity下面将介绍两个模块的作用和如何使用。  
 ### ModulesBase  
 ![ModuleBase Tree](images/module_base_tree.png)  
