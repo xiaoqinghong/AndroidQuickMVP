@@ -161,7 +161,7 @@ public abstract class BaseFragment<P extends IPresenter> extends RxFragment impl
      * 在OnStart是调用：若是在OnStart时被调用，则要满足两个条件，1：当前的fragment对用户是可见的；2、布局文件已经加载完毕
      * 在对用户可见时调用：若是OnStart是没有调用，而是在对用户可见时被调用，则说明在OnStart方法执行时，当前的fragment对用户不可见
      * @return 返回Boolean类型的值
-     * 若为true：表示下次对用户可见时需要进行数据加载；若为false：表示下次对用户可见时不需要进行数据加载
+     * 若为true：表示下次对用户可见时不需要进行数据加载；若为false：表示下次对用户可见时需要进行数据加载
      */
     protected abstract boolean loadData();
 }
